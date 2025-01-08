@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.place {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(#800080, #33006F);
+    position: relative;
+    overflow: hidden;
+}
+
+.paddleR, .paddleL {
+    width: 3vw;
+    height: 25vh;
+    background-color: #ec9706;
+    position: absolute;
+    border-radius: 5px;
+}
+
+
+.paddleL {
+    top: 5vh;
+    left: 1vw;
+    animation-name: paddleLAnimation;
+    animation-delay: 0s;
+    animation-duration: 15s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-play-state: running;
+}
+
+.paddleR {
+    top: 60vh;
+    right: 1vw;
+    animation-name: paddleRAnimation;
+    animation-delay: 0s;
+    animation-duration: 15s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-play-state: running;
+
+}
+
+
+.ball {
+    width: 5vh;
+    height: 5vh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 50%;
+    z-index: 999;
+    animation-name: ballAnimation;
+    animation-delay: 0s;
+    animation-duration: 15s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-play-state: running;
+}
+
+@keyframes paddleLAnimation {
+    0% {
+        top: 7vh;
+    }
+
+    10% {
+        top: 14vh;
+    }
+
+    20% {
+        top: 21vh;
+    }
+
+    30% {
+        top: 28vh;
+    }
+
+    40% {
+        top: 35vh;
+    }
+
+    50% {
+        top: 42vh;
+    }
+
+    60% {
+        top: 49vh;
+    }
+
+    70% {
+        top: 56vh;
+    }
+
+    80% {
+        top: 63vh;
+    }
+
+    90% {
+        top: 70vh;
+    }
+
+    100% {
+        top: 70vh;
+    }
+}
+
+@keyframes paddleRAnimation {
+    0% {
+
+        top: 60vh;
+    }
+
+    10% {
+        top: 21vh;
+
+    }
+
+    20% {
+
+        top: 46vh;
+    }
+
+    30% {
+
+        top: 39vh;
+    }
+
+    40% {
+
+        top: 30vh;
+    }
+
+    50% {
+
+        top: 23vh;
+    }
+
+    60% {
+
+        top: 30vh;
+    }
+
+    70% {
+
+        top: 37vh;
+    }
+
+    80% {
+
+        top: 44vh;
+    }
+
+    90% {
+
+        top: 51vh;
+    }
+
+    100% {
+        top: 58vh;
+    }
+
+}
+
+@keyframes ballAnimation {
+    0% {
+        left: 50%;
+        top: 100%;
+
+
+    }
+
+    10% {
+        left: 30vw;
+        top: 0;
+    }
+
+    20% {
+        left: 4.5vw;
+        top: 28vh;
+    }
+
+    30% {
+        left: 30vw;
+        top: 100vh;
+    }
+
+    40% {
+        left: 96.5vw;
+        top: 33vh;
+        /*ok*/
+    }
+
+    50% {
+        left: 70vw;
+        top: 0;
+    }
+
+    60% {
+        left: 4.5vw;
+        top: 49vh;
+    }
+
+    70% {
+        left: 30vw;
+        top: 0vh;
+    }
+
+    80% {
+        left: 40vw;
+        top: 100vh;
+    }
+
+    90% {
+        left: 60vw;
+        top: 0vh;
+    }
+
+    100% {
+        left: 30vw;
+        top: 100vh;
+    }
+}
+
+.place h1 {
+    font-family: "Playwrite CU", sans-serif;
+    color: #ec9706;
+    font-size: 60px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    animation-name: result;
+    animation-delay: 15s;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-play-state: running;
+    opacity: 0;
+}
+
+@keyframes result {
+    0% {
+        opacity: 0;
+    }
+
+    33.33% {
+        opacity: 1;
+    }
+
+    66.66% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
